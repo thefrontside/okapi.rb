@@ -1,5 +1,6 @@
 # Okapi
 
+[![Build Status](https://travis-ci.org/thefrontside/okapi.rb.svg?branch=master)](https://travis-ci.org/thefrontside/okapi.rb)
 
 ``` ruby
 
