@@ -10,4 +10,29 @@ RSpec.describe Okapi do
     expect(okapi.modules.length).to eql(11)
   end
 
+  describe "a specific tenant" do
+    let(:tenant) { okapi.with_tenant 'fs' }
+
+    it "can query whether an interface exists" do
+      expect(tenant.has_interface?("configuration")).to be true
+      expect(tenant.has_interface?("blip-bloop")).to be false
+    end
+
+    it "can add a new configuration entry"
+
+    it "can update an existing configuration entry"
+
+    it "can delete an existing configuration entry"
+
+    describe "when the configuration interface doesn't exist" do
+      it "blows up in a helpful way"
+    end
+
+    describe "when the tenant doesnt exist" do
+      it "blows up in a helpful way"
+    end
+  end
 end
+
+# tenant = client.tenant('fs')
+# config = tenant.interfaces['configuration']
