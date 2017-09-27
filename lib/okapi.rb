@@ -9,6 +9,7 @@ module Okapi
     def initialize(url, tenant_id = nil, authtoken = nil)
       @url = url
       @tenant_id = tenant_id
+      @authtoken = authtoken
     end
 
     def modules
