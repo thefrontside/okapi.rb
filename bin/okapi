@@ -1,38 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'clamp'
-require 'okapi'
-require 'uri'
 
-class Okapi::Main < Clamp::Command
-  option "--url", "URL",  "use okapi cluster at URL", default: URI("https://okapi.frontside.io") do |url|
-    URI(url)
-  end
-  option "--tenant", "TENANT",  "connect using this tenant" do |url|
-    URI(url)
-  end
+require 'okapi/cli'
 
-  option "--token", "TOKEN", "authenticate requests with TOKEN"
-
-  def execute
-    puts "main"
-  end
-
-  subcommand "login", "authenticate to okapi and store credentials" do
-    def execute
-      puts "login: #{client.inspect}"
-    end
-  end
-  subcommand "logout", "destroy existing credentials" do
-    def execute
-      puts "logout"
-    end
-  end
-
-  def client
-    Okapi::Client.new(url, tenant, token)
-  end
-
-end
-
-Okapi::Main.run
+puts Okapi::CLI.run
