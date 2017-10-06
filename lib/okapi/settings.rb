@@ -40,7 +40,7 @@ EOM
       env_var_name = "OKAPI_#{symbol.to_s.upcase}"
       env_value = ENV[env_var_name]
       instance_value = instance_variable_get("@#{symbol}")
-      if !env_value.nil? && !env_value.trim.empty?
+      if !env_value.nil? && !env_value.strip.empty?
         block_given? ? yield(env_value) : env_value
       elsif instance_value
         block_given? ? yield(instance_value) : instance_value
