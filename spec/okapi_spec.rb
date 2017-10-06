@@ -1,47 +1,63 @@
 require "spec_helper"
+require "okapi/cli"
+
 
 RSpec.describe Okapi do
-  let(:url) { 'https://okapi.frontside.io' }
-  let(:okapi) { Okapi::Client.new(url) }
-  let(:modules) { okapi.modules }
-  let(:first) { modules.first }
-
-  it "has a list of modules" do
-    expect(okapi.modules.length).to eql(11)
-  end
-
-  describe "a specific tenant" do
-    let(:tenant) { okapi.with_tenant 'fs' }
-
-    it "can query whether an interface exists" do
-      expect(tenant.has_interface?("configuration")).to be true
-      expect(tenant.has_interface?("blip-bloop")).to be false
-    end
-
-
-    describe "a specific user" do
-      let(:token) { tenant.login.login.create(username: 'devolio', password: 'testpass') }
-      let(:user) { tenant.with_authtoken token }
-
-      pending "list existing configuration entries" do
-        expect(user.configuration.entries.get)
-      end
-
-      it "can add a new configuration entry"
-
-      it "can update an existing configuration entry"
-
-      it "can delete an existing configuration entry"
-      describe "when the configuration interface doesn't exist" do
-        it "blows up in a helpful way"
-      end
-
-      describe "when the tenant doesnt exist" do
-        it "blows up in a helpful way"
-      end
+  def okapi(command)
+    VCR.use_cassette("okapi-cli-specs") do
+      Okapi::CLI.new('/install/path/okapi').run command.split(/\s+/)
     end
   end
+
+  let(:modules) { JSON.parse okapi "--url https://okapi.frontside.io modules:index" }
+
+  it "can get a list of modules" do
+    expect(modules.length).to be(11)
+    expect(modules.first["id"]).to eq("folio-mod-configuration")
+  end
+
+  it "blows up when accessing an endpoint that requires a tenant and none is specified" do
+    expect{ okapi "--url https://okapi.frontside.io login"}.to raise_error(Okapi::ConfigurationError)
+  end
+  it "blows up when trying to access an endpoint that requires an auth token, but none is specified" do
+    expect{ okapi "--url https://okapi.frontside.io --tenant fs configurations:index"}.to raise_error(Okapi::ConfigurationError)
+  end
+
+  it "blows up if you try to specify a configuration file that doesn't exist" do
+    expect{ okapi "--config does/not/exist modules:index" }
+  end
+
+  describe "setting configuration options" do
+    before do
+      okapi "config:set OKAPI_URL=https://okapi.frontside.io"
+    end
+    it "can read back the settings" do
+      expect{okapi "modules:index"}.not_to raise_error
+    end
+
+    describe "deleting a configuration option" do
+      before do
+        okapi "config:delete OKAPI_URL"
+      end
+      it "removes the persistent setting" do
+        expect{okapi "modules:index"}.to raise_error(Okapi::ConfigurationError)
+      end
+    end
+  end
+
+  describe "setting configuration options with a specified config file" do
+    before do
+      @config_file = "spec/sandbox/okapi-config"
+      FileUtils.rm_rf(@config_file)
+      okapi "--config #{@config_file} config:set OKAPI_URL=https://okapi.frontside.io"
+    end
+    it "can read back the settings" do
+      expect{okapi "--config #{@config_file} modules:index"}.not_to raise_error
+    end
+    it "does not overwrite the default settings" do
+      expect{okapi "modules:index"}.to raise_error(Okapi::ConfigurationError)
+    end
+  end
+
+
 end
-
-# tenant = client.tenant('fs')
-# config = tenant.interfaces['configuration']
