@@ -40,10 +40,10 @@ EOM
       env_var_name = "OKAPI_#{symbol.to_s.upcase}"
       env_value = ENV[env_var_name]
       instance_value = instance_variable_get("@#{symbol}")
-      if !env_value.nil? && !env_value.strip.empty?
-        block_given? ? yield(env_value) : env_value
-      elsif instance_value
+      if instance_value && !instance_value.strip.empty?
         block_given? ? yield(instance_value) : instance_value
+      elsif !env_value.nil? && !env_value.strip.empty?
+        block_given? ? yield(env_value) : env_value
       else
         raise ConfigurationError, error_msg
       end
