@@ -11,8 +11,8 @@ RSpec.describe Okapi do
   let(:modules) { JSON.parse okapi "--url https://okapi.frontside.io modules:index" }
 
   it "can get a list of modules" do
-    expect(modules.length).to be(11)
-    expect(modules.first["id"]).to eq("folio-mod-configuration")
+    expect(modules.length).to be(8)
+    expect(modules.first["id"]).to eq("okapi-2.0.0")
   end
 
   it "blows up when trying to access an endpoint as a tenant, but no tenant id is specified" do
