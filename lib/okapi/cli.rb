@@ -1,7 +1,7 @@
 require "okapi"
 require "okapi/cli/config"
 require "clamp"
-
+require "highline"
 
 module Okapi
   class CLI < Clamp::Command
@@ -20,6 +20,7 @@ module Okapi
 
     subcommand "config:set", "set the CLI configuration variable {OKAPI_URL, OKAPI_TENANT, OKAPI_TOKEN}" do
       parameter "ENV_VARS ...", "persist all ENV_VAR values for future use"
+
       def model
         variables.read! force: true
         variables.merge env_vars_list
@@ -39,21 +40,54 @@ module Okapi
       end
     end
 
-    subcommand "configurations:index", "get a list of configuration entries for this client" do
-      def model
-        client.user.get('/configurations/entries')
-      end
-    end
-
     subcommand "login", "authenticate to okapi and store credentials" do
       def model
-        client.tenant.post("/authn/login", {})
+        username = console.ask("username: ")
+        password = console.ask("password: ") { |q| q.echo = "*" }
+        client.tenant.post("/authn/login", username: username, password: password) do |json, response|
+          token = response['x-okapi-token']
+          variables.read! force: true
+          variables.merge ["OKAPI_TOKEN=#{token}"]
+          variables.write!
+          "Login successful. Token saved to #{variables.filename}"
+        end
       end
     end
 
     subcommand "logout", "destroy existing credentials" do
       def execute
-        puts "logout"
+        variables.read!
+        deletions = variables.delete_all! ["OKAPI_TOKEN"]
+        if deletions > 0
+          variables.write!
+          "Logged out. Updated #{variables.filename}"
+        else
+          "Configuration at #{variables.filename} is not currently logged in. Doing nothing."
+        end
+      end
+    end
+
+    subcommand "get", "issue a GET request" do
+      parameter "PATH", "PATH to fetch from the api"
+
+      def model
+        client.get path
+      end
+    end
+
+    subcommand "tenant:get", "issue a GET request as a Tenant" do
+      parameter "PATH", "PATH to fetch from the api"
+
+      def model
+        client.tenant.get path
+      end
+    end
+
+    subcommand "user:get", "issue a GET request as a User" do
+      parameter "PATH", "PATH to fetch from the api"
+
+      def model
+        client.user.get path
       end
     end
 
@@ -83,6 +117,18 @@ module Okapi
 
     def variables
       @variables ||= PersistentVariables.new(config)
+    end
+
+    def console
+      HighLine.new
+    end
+
+    def self.run(*args, &block)
+      super(*args, &block)
+    rescue Okapi::ConfigurationError => e
+      e.message
+    rescue Okapi::RequestError => e
+      e.message
     end
   end
 end

@@ -1,7 +1,6 @@
 require "spec_helper"
 require "okapi/cli"
 
-
 RSpec.describe Okapi do
   def okapi(command)
     VCR.use_cassette("okapi-cli-specs") do
@@ -16,11 +15,12 @@ RSpec.describe Okapi do
     expect(modules.first["id"]).to eq("folio-mod-configuration")
   end
 
-  it "blows up when accessing an endpoint that requires a tenant and none is specified" do
-    expect{ okapi "--url https://okapi.frontside.io login"}.to raise_error(Okapi::ConfigurationError)
+  it "blows up when trying to access an endpoint as a tenant, but no tenant id is specified" do
+    expect{ okapi "--url https://okapi.frontside.io tenant:get /authn/credentials"}.to raise_error(Okapi::ConfigurationError)
   end
-  it "blows up when trying to access an endpoint that requires an auth token, but none is specified" do
-    expect{ okapi "--url https://okapi.frontside.io --tenant fs configurations:index"}.to raise_error(Okapi::ConfigurationError)
+
+  it "blows up when trying to access an endpoint as a user, but no auth token is specified" do
+    expect{ okapi "--url https://okapi.frontside.io --tenant fs user:get /configurations/entries"}.to raise_error(Okapi::ConfigurationError)
   end
 
   it "blows up if you try to specify a configuration file that doesn't exist" do
@@ -31,6 +31,7 @@ RSpec.describe Okapi do
     before do
       okapi "config:set OKAPI_URL=https://okapi.frontside.io"
     end
+
     it "can read back the settings" do
       expect{okapi "modules:index"}.not_to raise_error
     end
@@ -39,6 +40,7 @@ RSpec.describe Okapi do
       before do
         okapi "config:delete OKAPI_URL"
       end
+
       it "removes the persistent setting" do
         expect{okapi "modules:index"}.to raise_error(Okapi::ConfigurationError)
       end
@@ -51,13 +53,51 @@ RSpec.describe Okapi do
       FileUtils.rm_rf(@config_file)
       okapi "--config #{@config_file} config:set OKAPI_URL=https://okapi.frontside.io"
     end
+
     it "can read back the settings" do
       expect{okapi "--config #{@config_file} modules:index"}.not_to raise_error
     end
+
     it "does not overwrite the default settings" do
       expect{okapi "modules:index"}.to raise_error(Okapi::ConfigurationError)
     end
   end
 
+  describe "logging in" do
+    def simulate_stdin_with(*args)
+      $stdout = StringIO.new
+      $stdin = StringIO.new
+      $stdin.puts(args.shift) until args.empty?
+      $stdin.rewind
+      yield
+    ensure
+      $stdout = STDOUT
+      $stdin = STDIN
+    end
 
+    let(:config) { JSON.parse okapi "config" }
+
+    before do
+      okapi "config:set OKAPI_URL=https://okapi.frontside.io OKAPI_TENANT=fs"
+      simulate_stdin_with("username", "password") { okapi "login" }
+    end
+
+    it "saves the token to the configuration file" do
+      expect(config).to include("OKAPI_TOKEN")
+    end
+
+    it "uses the saved token to access an endpoint as a user" do
+      expect{okapi "user:get /configurations/entries"}.to_not raise_error
+    end
+
+    describe "and logging out" do
+      before do
+        okapi "logout"
+      end
+
+      it "deletes the token from the configuration file" do
+        expect(config).to_not include("OKAPI_TOKEN")
+      end
+    end
+  end
 end
