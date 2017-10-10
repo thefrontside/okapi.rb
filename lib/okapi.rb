@@ -59,7 +59,7 @@ module Okapi
         RequestError.maybe_fail! response
         json = JSON.parse(response.body)
         if block_given?
-          yield json
+          yield json, response
         else
           json
         end
