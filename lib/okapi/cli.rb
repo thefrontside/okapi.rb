@@ -98,7 +98,8 @@ module Okapi
     end
 
     def client
-      Okapi::Client.new(settings)
+      variables.load!
+      Okapi::Client.new(url, tenant, token)
     end
 
     def execute
@@ -108,11 +109,6 @@ module Okapi
       else
         JSON.pretty_generate result
       end
-    end
-
-    def settings
-      variables.load!
-      Settings.new(url, tenant, token)
     end
 
     def variables
