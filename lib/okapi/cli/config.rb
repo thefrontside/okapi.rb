@@ -11,6 +11,10 @@ module Okapi
     def filename
       File.join(Dir.home, ".okapi")
     end
+
+    def inspect
+      filename
+    end
   end
 
   class ExplicitConfig
