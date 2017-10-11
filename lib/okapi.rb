@@ -8,25 +8,29 @@ module Okapi
   class ConfigurationError < StandardError; end
 
   class Client
-    def initialize(settings)
-      @settings = settings
+    def initialize(url = nil, tenant = nil, token = nil)
+      @url, @tenant, @token = url, tenant, token
+    end
+
+    def settings
+      Settings.new(@url, @tenant, @token)
     end
 
     def modules
-      endpoint = "#{@settings.url}/_/proxy/modules"
+      endpoint = "#{settings.url}/_/proxy/modules"
       open(endpoint) do |response|
         JSON.parse(response.read)
       end
     end
 
     def has_interface?(interface_name)
-      get("/_/proxy/tenants/#{@settings.tenant}/interfaces/#{interface_name}") do |json|
+      get("/_/proxy/tenants/#{settings.tenant}/interfaces/#{interface_name}") do |json|
         json.length > 0
       end
     end
 
     def url
-      @settings.url
+      settings.url
     end
 
     def get(path)
@@ -71,22 +75,22 @@ module Okapi
     end
 
     def tenant
-      Tenant.new(@settings)
+      Tenant.new(@url, @tenant, @token)
     end
 
     def user
-      User.new(@settings)
+      User.new(@url, @tenant, @token)
     end
 
     class Tenant < self
       def headers
-        super.merge "X-Okapi-Tenant" => @settings.tenant
+        super.merge "X-Okapi-Tenant" => settings.tenant
       end
     end
 
     class User < Tenant
       def headers
-        super.merge "X-Okapi-Token" => @settings.token
+        super.merge "X-Okapi-Token" => settings.token
       end
     end
 
