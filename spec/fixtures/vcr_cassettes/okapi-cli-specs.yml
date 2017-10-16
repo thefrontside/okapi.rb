@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://okapi.frontside.io/_/proxy/modules
+    uri: https://okapi-sandbox.frontside.io/_/proxy/modules
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.13.5
       Date:
-      - Mon, 09 Oct 2017 19:36:52 GMT
+      - Mon, 16 Oct 2017 18:31:21 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -36,38 +36,1403 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         [ {
+          "id" : "permissions-module-4.0.4",
+          "name" : "permissions"
+        }, {
           "id" : "okapi-2.0.0",
           "name" : "okapi-2.0.0"
         }, {
-          "id" : "mod-users-bl-2.1.1-SNAPSHOT",
+          "id" : "mod-users-bl-2.1.1-SNAPSHOT.3",
           "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.1.1-SNAPSHOT.2",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.1.0-SNAPSHOT.87",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.1.0-SNAPSHOT.1",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.3-SNAPSHOT.86",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.3-SNAPSHOT.85",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.3-SNAPSHOT.84",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.3-SNAPSHOT.83",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.2",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.2-SNAPSHOT.82",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.2-SNAPSHOT.81",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.2-SNAPSHOT.80",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-bl-2.0.1",
+          "name" : "users business logic"
+        }, {
+          "id" : "mod-users-14.2.2-SNAPSHOT.2",
+          "name" : "users"
+        }, {
+          "id" : "mod-users-14.2.1-SNAPSHOT.301",
+          "name" : "users"
+        }, {
+          "id" : "mod-users-14.2.1-SNAPSHOT.300",
+          "name" : "users"
+        }, {
+          "id" : "mod-users-14.2.1-SNAPSHOT.299",
+          "name" : "users"
+        }, {
+          "id" : "mod-users-14.2.1-SNAPSHOT.1",
+          "name" : "users"
         }, {
           "id" : "mod-users-14.2.0",
           "name" : "users"
         }, {
-          "id" : "mod-permissions-5.0.1-SNAPSHOT",
+          "id" : "mod-users-14.1.2-SNAPSHOT.298",
+          "name" : "users"
+        }, {
+          "id" : "mod-users-14.1.2-SNAPSHOT.297",
+          "name" : "users"
+        }, {
+          "id" : "mod-users-14.1.2-SNAPSHOT.296",
+          "name" : "users"
+        }, {
+          "id" : "mod-users-14.1.1",
+          "name" : "users"
+        }, {
+          "id" : "mod-user-import-1.0-SNAPSHOT.5",
+          "name" : "User import"
+        }, {
+          "id" : "mod-user-import-1.0-SNAPSHOT.4",
+          "name" : "User import"
+        }, {
+          "id" : "mod-user-import-1.0-SNAPSHOT.3",
+          "name" : "User import"
+        }, {
+          "id" : "mod-user-import-1.0-SNAPSHOT.2",
+          "name" : "User import"
+        }, {
+          "id" : "mod-permissions-5.0.1-SNAPSHOT.6",
           "name" : "permissions"
         }, {
-          "id" : "mod-login-4.0.1-SNAPSHOT",
+          "id" : "mod-permissions-5.0.1-SNAPSHOT.4",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-5.0.1-SNAPSHOT.2",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-5.0.0-SNAPSHOT.50",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-5.0.0-SNAPSHOT.49",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-5.0.0-SNAPSHOT.1",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-4.0.5-SNAPSHOT.48",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-4.0.5-SNAPSHOT.47",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-4.0.5-SNAPSHOT.46",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-4.0.5-SNAPSHOT.45",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-permissions-4.0.5-SNAPSHOT.44",
+          "name" : "permissions"
+        }, {
+          "id" : "mod-notify-1.1.4-SNAPSHOT.14",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.4-SNAPSHOT.13",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.3",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.3-SNAPSHOT.12",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.3-SNAPSHOT.11",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.2",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.2-SNAPSHOT.10",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.1",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.1-SNAPSHOT.9",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.1.1-SNAPSHOT.8",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.2-SNAPSHOT.7",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.2-SNAPSHOT.6",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.2-SNAPSHOT.5",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.2-SNAPSHOT.4",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.2-SNAPSHOT.3",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.2-SNAPSHOT.2",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.1-SNAPSHOT.19",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.1-SNAPSHOT.18",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.1-SNAPSHOT.1",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-1.0.0",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.17",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.16",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.15",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.14",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.13",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.12",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.11",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.10",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.9",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.8",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.7",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.6",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.5",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.4",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.2.0-SNAPSHOT.3",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notify-0.1.1",
+          "name" : "Notify"
+        }, {
+          "id" : "mod-notes-2.0.0-SNAPSHOT.26",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-2.0.0-SNAPSHOT.25",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-2.0.0-SNAPSHOT.24",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-2.0.0-SNAPSHOT.23",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-2.0.0-SNAPSHOT.22",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-2.0.0-SNAPSHOT.21",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.20",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.19",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.18",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.17",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.16",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.15",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.14",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.13",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.12",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.11",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.10",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.9",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.8",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.7",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.2-SNAPSHOT.6",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.40",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.39",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.38",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.37",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.36",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.35",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.34",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.5",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.1-SNAPSHOT.4",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-1.0.0",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.33",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.32",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.31",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.30",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.29",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.28",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.27",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.26",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.25",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.24",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.23",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.22",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.21",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.20",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.19",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT.18",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.1-SNAPSHOT",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.2.0",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.1.2-SNAPSHOT.17",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.1.2-SNAPSHOT.16",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.1.2-SNAPSHOT.15",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.1.2-SNAPSHOT.14",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.1.2-SNAPSHOT.13",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.1.2-SNAPSHOT.12",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-notes-0.1.2-SNAPSHOT",
+          "name" : "Notes"
+        }, {
+          "id" : "mod-login-saml-1.0.1-SNAPSHOT.7",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.1-SNAPSHOT.6",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.1-SNAPSHOT.5",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.16",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.15",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.14",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.13",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.12",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.11",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.10",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.9",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.4",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.3",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-saml-1.0.0-SNAPSHOT.1",
+          "name" : "SAML login"
+        }, {
+          "id" : "mod-login-4.0.1-SNAPSHOT.3",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-4.0.1-SNAPSHOT.2",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-4.0.0-SNAPSHOT.45",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-4.0.0-SNAPSHOT.1",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-3.1.1-SNAPSHOT.44",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-3.1.1-SNAPSHOT.43",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-3.1.1-SNAPSHOT.42",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-3.1.1-SNAPSHOT.41",
+          "name" : "login"
+        }, {
+          "id" : "mod-login-3.1.1-SNAPSHOT.40",
           "name" : "login"
         }, {
           "id" : "mod-kb-ebsco-0.1.0",
           "name" : "kb-ebsco"
         }, {
-          "id" : "mod-configuration-3.0.1-SNAPSHOT",
+          "id" : "mod-inventory-storage-5.1.1-SNAPSHOT.27",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "mod-inventory-storage-5.1.1-SNAPSHOT.26",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "mod-inventory-storage-5.1.1-SNAPSHOT.25",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "mod-inventory-storage-5.1.1-SNAPSHOT.24",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "mod-inventory-storage-5.1.1-SNAPSHOT.22",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.47",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.46",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.45",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.44",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.43",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.42",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.41",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.40",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-inventory-5.1.2-SNAPSHOT.38",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.18",
           "name" : "Configuration"
         }, {
-          "id" : "mod-authtoken-1.0.1-SNAPSHOT",
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.17",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.16",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.15",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.14",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.13",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.12",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.11",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.10",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.1-SNAPSHOT.9",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.0-SNAPSHOT.525",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.0-SNAPSHOT.524",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.0-SNAPSHOT.8",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.0-SNAPSHOT.7",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.0-SNAPSHOT.6",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.0-SNAPSHOT.4",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-3.0.0-SNAPSHOT.3",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-2.0.1-SNAPSHOT.523",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-2.0.1-SNAPSHOT.522",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-2.0.1-SNAPSHOT.521",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-configuration-2.0.1-SNAPSHOT.520",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-circulation-storage-4.0.0-SNAPSHOT.42",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-storage-3.3.1-SNAPSHOT.41",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-storage-3.3.0",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-storage-3.3.0-SNAPSHOT.40",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-storage-3.3.0-SNAPSHOT.39",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-storage-3.3.0-SNAPSHOT.38",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-storage-3.3.0-SNAPSHOT.36",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-storage-3.3.0-SNAPSHOT.33",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "mod-circulation-4.5.1-SNAPSHOT.62",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.1-SNAPSHOT.61",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.60",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.59",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.58",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.57",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.56",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.55",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.53",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.52",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.51",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.49",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.46",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-circulation-4.5.0-SNAPSHOT.43",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "mod-authtoken-1.0.1-SNAPSHOT.4",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-1.0.1-SNAPSHOT.3",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-1.0.1-SNAPSHOT.2",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-1.0.0-SNAPSHOT.46",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-1.0.0-SNAPSHOT.1",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-0.6.2-SNAPSHOT.45",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-0.6.2-SNAPSHOT.44",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-0.6.2-SNAPSHOT.43",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-0.6.2-SNAPSHOT.42",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-0.6.2-SNAPSHOT.41",
+          "name" : "authtoken"
+        }, {
+          "id" : "mod-authtoken-0.6.2-SNAPSHOT.40",
+          "name" : "authtoken"
+        }, {
+          "id" : "login-module-3.1.0",
+          "name" : "login"
+        }, {
+          "id" : "inventory-storage-5.1.1-SNAPSHOT.21",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "inventory-storage-5.1.1-SNAPSHOT.19",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "inventory-storage-5.1.1-SNAPSHOT.17",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "inventory-storage-5.1.1-SNAPSHOT.16",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "inventory-storage-5.1.0",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "inventory-5.1.2-SNAPSHOT.37",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.35",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.33",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.31",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.29",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.27",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.25",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.24",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.1-SNAPSHOT.2",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "inventory-5.1.0",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "folio_users-2.10.100039",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100038",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100037",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100036",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100035",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100034",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100033",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100032",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100031",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100030",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100029",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100028",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100027",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100026",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100025",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100024",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100023",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100022",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100021",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100020",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100019",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100018",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100017",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100016",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100015",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100014",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100013",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100012",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100011",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.100010",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10009",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10008",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10007",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10006",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10005",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10004",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10003",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10002",
+          "name" : "User management"
+        }, {
+          "id" : "folio_users-2.10.10001",
+          "name" : "User management"
+        }, {
+          "id" : "folio_stripes-core-2.7.100039",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100038",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100036",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100035",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100034",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100033",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100032",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100031",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100030",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100028",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100027",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100026",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100025",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100024",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100023",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100022",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100021",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100020",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100019",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100018",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100017",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100016",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100015",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100014",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100013",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100012",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100011",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.100010",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10009",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10008",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10007",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10006",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10005",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10004",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10003",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10002",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_stripes-core-2.7.10001",
+          "name" : "The starting point for Stripes applications"
+        }, {
+          "id" : "folio_scan-1.2.10007",
+          "name" : "Item Check-in/Check-out"
+        }, {
+          "id" : "folio_scan-1.2.10006",
+          "name" : "Item Check-in/Check-out"
+        }, {
+          "id" : "folio_scan-1.2.10005",
+          "name" : "Item Check-in/Check-out"
+        }, {
+          "id" : "folio_scan-1.2.10004",
+          "name" : "Item Check-in/Check-out"
+        }, {
+          "id" : "folio_scan-1.2.10003",
+          "name" : "Item Check-in/Check-out"
+        }, {
+          "id" : "folio_scan-1.2.10002",
+          "name" : "Item Check-in/Check-out"
+        }, {
+          "id" : "folio_scan-1.2.1001",
+          "name" : "Item Check-in/Check-out"
+        }, {
+          "id" : "folio_requests-1.0.10009",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-1.0.10008",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-1.0.10007",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-1.0.10006",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-1.0.10005",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-0.0.10004",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-0.0.10003",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-0.0.10002",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_requests-0.0.10001",
+          "name" : "Requests manager"
+        }, {
+          "id" : "folio_plugin-find-user-1.1.10006",
+          "name" : "User-finder for Stripes"
+        }, {
+          "id" : "folio_plugin-find-user-1.1.10005",
+          "name" : "User-finder for Stripes"
+        }, {
+          "id" : "folio_plugin-find-user-1.1.10004",
+          "name" : "User-finder for Stripes"
+        }, {
+          "id" : "folio_plugin-find-user-1.1.10003",
+          "name" : "User-finder for Stripes"
+        }, {
+          "id" : "folio_plugin-find-user-1.1.10002",
+          "name" : "User-finder for Stripes"
+        }, {
+          "id" : "folio_organization-2.2.10006",
+          "name" : "Organization settings"
+        }, {
+          "id" : "folio_organization-2.2.10005",
+          "name" : "Organization settings"
+        }, {
+          "id" : "folio_organization-2.2.10004",
+          "name" : "Organization settings"
+        }, {
+          "id" : "folio_organization-2.2.10003",
+          "name" : "Organization settings"
+        }, {
+          "id" : "folio_organization-2.2.10002",
+          "name" : "Organization settings"
+        }, {
+          "id" : "folio_organization-2.2.10001",
+          "name" : "Organization settings"
+        }, {
+          "id" : "folio_items-1.11.10008",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_items-1.11.10007",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_items-1.11.10006",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_items-1.11.10005",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_items-1.11.10004",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_items-1.11.10003",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_items-1.11.10002",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_items-1.11.10001",
+          "name" : "Items management"
+        }, {
+          "id" : "folio_instances-1.0.100010",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10009",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10008",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10007",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10006",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10005",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10004",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10003",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10002",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_instances-1.0.10001",
+          "name" : "Instances manager"
+        }, {
+          "id" : "folio_developer-1.3.10004",
+          "name" : "Developer settings"
+        }, {
+          "id" : "folio_developer-1.3.10003",
+          "name" : "Developer settings"
+        }, {
+          "id" : "folio_developer-1.3.10002",
+          "name" : "Developer settings"
+        }, {
+          "id" : "folio_developer-1.3.10001",
+          "name" : "Developer settings"
+        }, {
+          "id" : "folio_circulation-1.1.100012",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.100011",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.100010",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10009",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10008",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10007",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10006",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10005",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10004",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10003",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10002",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_circulation-1.1.10001",
+          "name" : "Circulation manager"
+        }, {
+          "id" : "folio_checkout-1.1.200028",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200027",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200026",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200025",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200024",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200023",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200022",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200021",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200020",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200019",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200018",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200017",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200016",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200015",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200014",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200011",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.200010",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20009",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20008",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20007",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20006",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20005",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20004",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20003",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20002",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkout-1.1.20001",
+          "name" : "Item Check-out"
+        }, {
+          "id" : "folio_checkin-1.1.10007",
+          "name" : "Item Check-in"
+        }, {
+          "id" : "folio_checkin-1.1.10006",
+          "name" : "Item Check-in"
+        }, {
+          "id" : "folio_checkin-1.1.10005",
+          "name" : "Item Check-in"
+        }, {
+          "id" : "folio_checkin-1.1.10004",
+          "name" : "Item Check-in"
+        }, {
+          "id" : "folio_checkin-1.1.10003",
+          "name" : "Item Check-in"
+        }, {
+          "id" : "folio_checkin-1.1.10002",
+          "name" : "Item Check-in"
+        }, {
+          "id" : "folio_checkin-1.1.10001",
+          "name" : "Item Check-in"
+        }, {
+          "id" : "configuration-2.0.0",
+          "name" : "Configuration"
+        }, {
+          "id" : "circulation-storage-3.3.0-SNAPSHOT.32",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.3.0-SNAPSHOT.31",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.1-SNAPSHOT.29",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.1-SNAPSHOT.27",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.1-SNAPSHOT.25",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.1-SNAPSHOT.24",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.1-SNAPSHOT.23",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.1-SNAPSHOT.22",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.1-SNAPSHOT.4",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-storage-3.2.0",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "circulation-4.5.0-SNAPSHOT.42",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.5.0-SNAPSHOT.41",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.5.0-SNAPSHOT.40",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.4.1-SNAPSHOT.38",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.4.0",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.4.0-SNAPSHOT.36",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.4.0-SNAPSHOT.34",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.4.0-SNAPSHOT.33",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.4.0-SNAPSHOT.31",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.3.1-SNAPSHOT.30",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.3.1-SNAPSHOT.28",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.3.1-SNAPSHOT.26",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.3.1-SNAPSHOT.25",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.3.1-SNAPSHOT.24",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "circulation-4.3.0",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "authtoken-module-0.6.1",
           "name" : "authtoken"
         } ]
-    http_version:
-  recorded_at: Mon, 09 Oct 2017 19:36:52 GMT
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:21 GMT
+- request:
+    method: get
+    uri: https://okapi.frontside.io/_/proxy/modules
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.3
+      Date:
+      - Mon, 16 Oct 2017 18:31:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains;
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [ {
+          "id" : "folio-mod-configuration",
+          "name" : "Configuration"
+        }, {
+          "id" : "mod-kb-ebsco-7c3d2a6d65d7791a936ba754f72a133e891dbddf",
+          "name" : "kb-ebsco"
+        }, {
+          "id" : "folio-mod-auth-token",
+          "name" : "authtoken"
+        }, {
+          "id" : "folio-mod-circulation",
+          "name" : "Circulation Module"
+        }, {
+          "id" : "folio-mod-permissions",
+          "name" : "permissions"
+        }, {
+          "id" : "folio-mod-inventory-storage",
+          "name" : "Inventory Storage Module"
+        }, {
+          "id" : "folio-mod-login",
+          "name" : "login"
+        }, {
+          "id" : "folio-mod-users",
+          "name" : "users"
+        }, {
+          "id" : "folio-mod-inventory",
+          "name" : "Inventory Module"
+        }, {
+          "id" : "folio-mod-circulation-storage",
+          "name" : "Circulation Storage Module"
+        }, {
+          "id" : "folio-mod-users-bl",
+          "name" : "users business logic"
+        } ]
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:21 GMT
 - request:
     method: post
-    uri: https://okapi.frontside.io/authn/login
+    uri: https://okapi-sandbox.frontside.io/authn/login
     body:
       encoding: UTF-8
-      string: '{"username":"username","password":"password"}'
+      string: '{"username":"admin","password":"admin"}'
     headers:
       Content-Type:
       - application/json
@@ -87,7 +1452,7 @@ http_interactions:
       Server:
       - nginx/1.13.5
       Date:
-      - Mon, 09 Oct 2017 19:39:39 GMT
+      - Mon, 16 Oct 2017 18:31:21 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -95,18 +1460,20 @@ http_interactions:
       Connection:
       - keep-alive
       X-Okapi-Trace:
-      - 'POST mod-authtoken-1.0.1-SNAPSHOT http://10.15.251.168:80/authn/login : 202'
-      - 'POST mod-login-4.0.1-SNAPSHOT http://10.15.241.175:80/authn/login : 201 186493us'
+      - 'POST mod-authtoken-1.0.1-SNAPSHOT.4 http://10.31.248.123:8081/authn/login
+        : 202'
+      - 'POST mod-login-4.0.1-SNAPSHOT.3 http://10.31.245.210:8081/authn/login : 201
+        116335us'
       X-Okapi-Token:
-      - <OKAPI_TEST_TOKEN>
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
       Host:
-      - okapi.frontside.io
+      - okapi-sandbox.frontside.io
       X-Real-Ip:
-      - 10.128.0.7
+      - 10.128.0.11
       X-Forwarded-For:
-      - 10.128.0.7
+      - 10.128.0.11
       X-Forwarded-Host:
-      - okapi.frontside.io
+      - okapi-sandbox.frontside.io
       X-Forwarded-Port:
       - '443'
       X-Forwarded-Proto:
@@ -126,11 +1493,11 @@ http_interactions:
       User-Agent:
       - Ruby
       X-Okapi-Request-Id:
-      - 899400/authn
+      - 212825/authn
       X-Okapi-Url:
-      - http://10.15.254.182:80
+      - http://10.31.244.201:80
       X-Okapi-Module-Permissions:
-      - '{"mod-authtoken-1.0.1-SNAPSHOT":["perms.users.get"],"mod-login-4.0.1-SNAPSHOT":["auth.signtoken","users.collection.get"]}'
+      - '{"mod-authtoken-1.0.1-SNAPSHOT.4":["perms.users.get"],"mod-login-4.0.1-SNAPSHOT.3":["auth.signtoken","users.collection.get"]}'
       X-Okapi-Permissions:
       - "[]"
       Strict-Transport-Security:
@@ -139,14 +1506,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "username" : "username",
-          "password" : "password"
+          "username" : "admin",
+          "password" : "admin"
         }
-    http_version:
-  recorded_at: Mon, 09 Oct 2017 19:39:39 GMT
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:21 GMT
 - request:
     method: get
-    uri: https://okapi.frontside.io/configurations/entries
+    uri: https://okapi-sandbox.frontside.io/configurations/entries
     body:
       encoding: US-ASCII
       string: ''
@@ -158,7 +1525,7 @@ http_interactions:
       X-Okapi-Tenant:
       - fs
       X-Okapi-Token:
-      - <OKAPI_TEST_TOKEN>
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -171,7 +1538,7 @@ http_interactions:
       Server:
       - nginx/1.13.5
       Date:
-      - Mon, 09 Oct 2017 19:39:39 GMT
+      - Mon, 16 Oct 2017 18:31:22 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -179,18 +1546,18 @@ http_interactions:
       Connection:
       - keep-alive
       X-Okapi-Trace:
-      - 'GET mod-authtoken-1.0.1-SNAPSHOT http://10.15.251.168:80/configurations/entries
+      - 'GET mod-authtoken-1.0.1-SNAPSHOT.4 http://10.31.248.123:8081/configurations/entries
         : 202'
-      - 'GET mod-configuration-3.0.1-SNAPSHOT http://10.15.255.252:80/configurations/entries
-        : 200 80141us'
+      - 'GET mod-configuration-3.0.1-SNAPSHOT.18 http://10.31.254.128:8081/configurations/entries
+        : 200 49874us'
       Host:
-      - okapi.frontside.io
+      - okapi-sandbox.frontside.io
       X-Real-Ip:
-      - 10.128.0.7
+      - 10.28.1.1
       X-Forwarded-For:
-      - 10.128.0.7
+      - 10.28.1.1
       X-Forwarded-Host:
-      - okapi.frontside.io
+      - okapi-sandbox.frontside.io
       X-Forwarded-Port:
       - '443'
       X-Forwarded-Proto:
@@ -210,19 +1577,19 @@ http_interactions:
       User-Agent:
       - Ruby
       X-Okapi-Request-Id:
-      - 336068/configurations
+      - 986861/configurations
       X-Okapi-Url:
-      - http://10.15.254.182:80
+      - http://10.31.244.201:80
       X-Okapi-Permissions-Required:
       - configuration.entries.collection.get
       X-Okapi-Module-Permissions:
-      - '{"mod-authtoken-1.0.1-SNAPSHOT":["perms.users.get"]}'
+      - '{"mod-authtoken-1.0.1-SNAPSHOT.4":["perms.users.get"]}'
       X-Okapi-Permissions:
       - '["configuration.entries.collection.get"]'
       X-Okapi-User-Id:
       - 1ad737b0-d847-11e6-bf26-cec0c932ce01
       X-Okapi-Token:
-      - <OKAPI_TEST_TOKEN>
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains;
     body:
@@ -321,12 +1688,340 @@ http_interactions:
             "enabled" : true,
             "value" : "DKK"
           } ],
-          "totalRecords" : 13,
+          "totalRecords" : 17,
           "resultInfo" : {
-            "totalRecords" : 13,
+            "totalRecords" : 17,
             "facets" : [ ]
           }
         }
-    http_version:
-  recorded_at: Mon, 09 Oct 2017 19:39:39 GMT
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:22 GMT
+- request:
+    method: post
+    uri: https://okapi-sandbox.frontside.io/configurations/entries
+    body:
+      encoding: UTF-8
+      string: '{"module":"KB_EBSCO","configName":"api_credentials","code":"kb.ebsco.credentials","description":"EBSCO
+        RM-API Credentials","enabled":true,"value":"customer-id=xxx.xxx&api-key=xxx.xxxx"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Okapi-Tenant:
+      - fs
+      X-Okapi-Token:
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Mon, 16 Oct 2017 18:31:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Okapi-Trace:
+      - 'POST mod-authtoken-1.0.1-SNAPSHOT.4 http://10.31.248.123:8081/configurations/entries
+        : 202'
+      - 'POST mod-configuration-3.0.1-SNAPSHOT.18 http://10.31.254.128:8081/configurations/entries
+        : 201 47879us'
+      Location:
+      - "/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e"
+      Host:
+      - okapi-sandbox.frontside.io
+      X-Real-Ip:
+      - 10.128.0.9
+      X-Forwarded-For:
+      - 10.128.0.9
+      X-Forwarded-Host:
+      - okapi-sandbox.frontside.io
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      X-Original-Uri:
+      - "/configurations/entries"
+      X-Scheme:
+      - https
+      X-Auth-Request-Redirect:
+      - "/configurations/entries"
+      Accept:
+      - application/json
+      X-Okapi-Tenant:
+      - fs
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      X-Okapi-Request-Id:
+      - 139043/configurations
+      X-Okapi-Url:
+      - http://10.31.244.201:80
+      X-Okapi-Permissions-Required:
+      - configuration.entries.item.post
+      X-Okapi-Module-Permissions:
+      - '{"mod-authtoken-1.0.1-SNAPSHOT.4":["perms.users.get"]}'
+      X-Okapi-Permissions:
+      - '["configuration.entries.item.post"]'
+      X-Okapi-User-Id:
+      - 1ad737b0-d847-11e6-bf26-cec0c932ce01
+      X-Okapi-Token:
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains;
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id" : "4e9bb419-e8e7-407a-9261-ccf31488922e",
+          "module" : "KB_EBSCO",
+          "configName" : "api_credentials",
+          "code" : "kb.ebsco.credentials",
+          "description" : "EBSCO RM-API Credentials",
+          "enabled" : true,
+          "value" : "customer-id=xxx.xxx&api-key=xxx.xxxx",
+          "metadata" : {
+            "createdDate" : "2017-10-16T18:31:22.661+0000",
+            "createdByUserId" : "1ad737b0-d847-11e6-bf26-cec0c932ce01",
+            "updatedDate" : "2017-10-16T18:31:22.661+0000",
+            "updatedByUserId" : "1ad737b0-d847-11e6-bf26-cec0c932ce01"
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:22 GMT
+- request:
+    method: get
+    uri: https://okapi-sandbox.frontside.io/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Okapi-Tenant:
+      - fs
+      X-Okapi-Token:
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Mon, 16 Oct 2017 18:31:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Okapi-Trace:
+      - 'GET mod-authtoken-1.0.1-SNAPSHOT.4 http://10.31.248.123:8081/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e
+        : 202'
+      - 'GET mod-configuration-3.0.1-SNAPSHOT.18 http://10.31.254.128:8081/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e
+        : 200 46099us'
+      Host:
+      - okapi-sandbox.frontside.io
+      X-Real-Ip:
+      - 10.28.1.1
+      X-Forwarded-For:
+      - 10.28.1.1
+      X-Forwarded-Host:
+      - okapi-sandbox.frontside.io
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      X-Original-Uri:
+      - "/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e"
+      X-Scheme:
+      - https
+      X-Auth-Request-Redirect:
+      - "/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e"
+      Accept:
+      - application/json
+      X-Okapi-Tenant:
+      - fs
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      X-Okapi-Request-Id:
+      - 147811/configurations
+      X-Okapi-Url:
+      - http://10.31.244.201:80
+      X-Okapi-Permissions-Required:
+      - configuration.entries.item.get
+      X-Okapi-Module-Permissions:
+      - '{"mod-authtoken-1.0.1-SNAPSHOT.4":["perms.users.get"]}'
+      X-Okapi-Permissions:
+      - '["configuration.entries.item.get"]'
+      X-Okapi-User-Id:
+      - 1ad737b0-d847-11e6-bf26-cec0c932ce01
+      X-Okapi-Token:
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains;
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id" : "4e9bb419-e8e7-407a-9261-ccf31488922e",
+          "module" : "KB_EBSCO",
+          "configName" : "api_credentials",
+          "code" : "kb.ebsco.credentials",
+          "description" : "EBSCO RM-API Credentials",
+          "enabled" : true,
+          "value" : "customer-id=xxx.xxx&api-key=xxx.xxxx",
+          "metadata" : {
+            "createdDate" : "2017-10-16T18:31:22.661+0000",
+            "createdByUserId" : "1ad737b0-d847-11e6-bf26-cec0c932ce01",
+            "updatedDate" : "2017-10-16T18:31:22.661+0000",
+            "updatedByUserId" : "1ad737b0-d847-11e6-bf26-cec0c932ce01"
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:23 GMT
+- request:
+    method: delete
+    uri: https://okapi-sandbox.frontside.io/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - text/plain
+      X-Okapi-Tenant:
+      - fs
+      X-Okapi-Token:
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Mon, 16 Oct 2017 18:31:23 GMT
+      Connection:
+      - keep-alive
+      X-Okapi-Trace:
+      - 'DELETE mod-authtoken-1.0.1-SNAPSHOT.4 http://10.31.248.123:8081/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e
+        : 202'
+      - 'DELETE mod-configuration-3.0.1-SNAPSHOT.18 http://10.31.254.128:8081/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e
+        : 204 46756us'
+      Host:
+      - okapi-sandbox.frontside.io
+      X-Real-Ip:
+      - 10.128.0.9
+      X-Forwarded-For:
+      - 10.128.0.9
+      X-Forwarded-Host:
+      - okapi-sandbox.frontside.io
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      X-Original-Uri:
+      - "/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e"
+      X-Scheme:
+      - https
+      X-Auth-Request-Redirect:
+      - "/configurations/entries/4e9bb419-e8e7-407a-9261-ccf31488922e"
+      Accept:
+      - text/plain
+      X-Okapi-Tenant:
+      - fs
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      X-Okapi-Request-Id:
+      - '077087/configurations'
+      X-Okapi-Url:
+      - http://10.31.244.201:80
+      X-Okapi-Permissions-Required:
+      - configuration.entries.item.delete
+      X-Okapi-Module-Permissions:
+      - '{"mod-authtoken-1.0.1-SNAPSHOT.4":["perms.users.get"]}'
+      X-Okapi-Permissions:
+      - '["configuration.entries.item.delete"]'
+      X-Okapi-User-Id:
+      - 1ad737b0-d847-11e6-bf26-cec0c932ce01
+      X-Okapi-Token:
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains;
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:23 GMT
+- request:
+    method: get
+    uri: https://okapi-sandbox.frontside.io/configurations/4e9bb419-e8e7-407a-9261-ccf31488922e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Okapi-Tenant:
+      - fs
+      X-Okapi-Token:
+      - eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOiIxYWQ3MzdiMC1kODQ3LTExZTYtYmYyNi1jZWMwYzkzMmNlMDEiLCJ0ZW5hbnQiOiJmcyJ9.eVqezHWdAGORNB8VHZ-IlbYeHXgzEHyVd2NTQnRRe-IuIXaChBe6CiZnjdRVbzqpF58YHpCfvE6sQh_znkfAEw
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Mon, 16 Oct 2017 18:31:23 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '114'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains;
+    body:
+      encoding: UTF-8
+      string: No suitable module found for http://okapi-sandbox.frontside.io/configurations/4e9bb419-e8e7-407a-9261-ccf31488922e
+    http_version: 
+  recorded_at: Mon, 16 Oct 2017 18:31:23 GMT
 recorded_with: VCR 3.0.3

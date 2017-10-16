@@ -34,8 +34,9 @@ RSpec.configure do |config|
   end
 end
 
+
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data("<OKAPI_TEST_TOKEN>") { ENV["OKAPI_TEST_TOKEN"] }
+  config.default_cassette_options = { record: :new_episodes }
 end
