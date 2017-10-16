@@ -8,11 +8,11 @@ RSpec.describe Okapi do
     end
   end
 
-  let(:modules) { JSON.parse okapi "--url https://okapi.frontside.io modules:index" }
+  let(:modules) { JSON.parse okapi "--url https://okapi-sandbox.frontside.io modules:index" }
 
   it "can get a list of modules" do
-    expect(modules.length).to be(8)
-    expect(modules.first["id"]).to eq("okapi-2.0.0")
+    expect(modules.length).to be(440)
+    expect(modules.first["id"]).to eq("permissions-module-4.0.4")
   end
 
   it "blows up when trying to access an endpoint as a tenant, but no tenant id is specified" do
@@ -51,7 +51,7 @@ RSpec.describe Okapi do
     before do
       @config_file = "spec/sandbox/okapi-config"
       FileUtils.rm_rf(@config_file)
-      okapi "--config #{@config_file} config:set OKAPI_URL=https://okapi.frontside.io"
+      okapi "--config #{@config_file} config:set OKAPI_URL=https://okapi-sandbox.frontside.io"
     end
 
     it "can read back the settings" do
@@ -78,8 +78,8 @@ RSpec.describe Okapi do
     let(:config) { JSON.parse okapi "config" }
 
     before do
-      okapi "config:set OKAPI_URL=https://okapi.frontside.io OKAPI_TENANT=fs"
-      simulate_stdin_with("username", "password") { okapi "login" }
+      okapi "config:set OKAPI_URL=https://okapi-sandbox.frontside.io OKAPI_TENANT=fs"
+      simulate_stdin_with("admin", "admin") { okapi "login" }
     end
 
     it "saves the token to the configuration file" do
@@ -88,6 +88,40 @@ RSpec.describe Okapi do
 
     it "uses the saved token to access an endpoint as a user" do
       expect{okapi "user:get /configurations/entries"}.to_not raise_error
+    end
+
+    describe "creating a resource" do
+      before do
+
+        simulate_stdin_with(<<-EOJSON) do
+{
+  "module": "KB_EBSCO",
+  "configName": "api_credentials",
+  "code": "kb.ebsco.credentials",
+  "description": "EBSCO RM-API Credentials",
+  "enabled": true,
+  "value": "customer-id=xxx.xxx&api-key=xxx.xxxx"
+}
+EOJSON
+          @result = JSON.parse okapi "create /configurations/entries"
+        end
+        @entry =  JSON.parse okapi "user:get /configurations/entries/#{@result["id"]}"
+      end
+
+      it "stores the JSON" do
+        expect(@entry["id"]).to eql(@result["id"])
+        expect(@entry["code"]).to eql("kb.ebsco.credentials")
+      end
+
+      describe "and then deleting it" do
+        before do
+          okapi "destroy /configurations/entries/#{@result["id"]}"
+        end
+        it "no longer can be found as a resource" do
+          expect{okapi "user:get /configurations/#{@result["id"]}"}.to raise_error(Okapi::RequestError, /HTTPNotFound/)
+        end
+      end
+
     end
 
     describe "and logging out" do

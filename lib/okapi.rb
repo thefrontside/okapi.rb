@@ -34,17 +34,10 @@ module Okapi
     end
 
     def get(path)
-      http = Net::HTTP.new(url.host, url.port)
-      if url.scheme == "https"
-        http.use_ssl = true
-      end
-
-      http.start do
-        response = http.get(path, headers)
-        RequestError.maybe_fail! response
+      request(:get, path) do |response|
         json = JSON.parse(response.body)
         if block_given?
-          yield json
+          yield json, response
         else
           json
         end
@@ -52,20 +45,33 @@ module Okapi
     end
 
     def post(path, body)
-      http = Net::HTTP.new(url.host, url.port)
-      if url.scheme == "https"
-        http.use_ssl = true
-      end
-
-      http.start do
-        response = http.post(path, JSON.generate(body), headers)
-
-        RequestError.maybe_fail! response
+      request(:post, path, JSON.generate(body)) do |response|
         json = JSON.parse(response.body)
         if block_given?
           yield json, response
         else
           json
+        end
+      end
+    end
+
+    def delete(path)
+      request(:delete, path, nil, 'Accept' => 'text/plain')
+    end
+
+    def request(verb, path, body = nil, header_overrides = {})
+      http = Net::HTTP.new(url.host, url.port)
+      if url.scheme == "https"
+        http.use_ssl = true
+      end
+      http.start do
+        args = [body].compact
+        response = http.send(verb, path, *args, headers.merge(header_overrides))
+        RequestError.maybe_fail! response
+        if block_given?
+          yield response
+        else
+          response
         end
       end
     end

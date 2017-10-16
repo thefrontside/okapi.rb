@@ -91,6 +91,23 @@ module Okapi
       end
     end
 
+    subcommand "create", "POST the contents of STDIN to PATH" do
+      parameter "PATH", "PATH of the resource collection in which the create will happen"
+
+      def model
+        client.user.post path, JSON.parse($stdin.read)
+      end
+    end
+
+    subcommand "destroy", "issue a DELETE request to the specified PATH" do
+      parameter "PATH", "PATH of the resource to delete"
+
+      def model
+        client.user.delete path
+        "Successfully deleted #{path}"
+      end
+    end
+
     subcommand "modules:index", "show a listing of all installed modules" do
       def model
         client.modules
