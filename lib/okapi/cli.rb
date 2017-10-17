@@ -11,6 +11,8 @@ module Okapi
     option "--url", "URL",  "use okapi cluster at URL"
     option "--tenant", "TENANT",  "connect using this tenant"
     option "--token", "TOKEN", "authenticate requests with TOKEN"
+    option "--no-tenant", :flag, "perform the request without a tenant or user token"
+    option "--no-user", :flag, "perform the request without the user token"
 
     subcommand "config", "show all configured variables" do
       def model
@@ -67,27 +69,11 @@ module Okapi
       end
     end
 
-    subcommand "get", "issue a GET request" do
-      parameter "PATH", "PATH to fetch from the api"
+    subcommand "show", "issue a GET request to the spcified PATH" do
+      parameter "PATH", "PATH of the resource to get"
 
       def model
         client.get path
-      end
-    end
-
-    subcommand "tenant:get", "issue a GET request as a Tenant" do
-      parameter "PATH", "PATH to fetch from the api"
-
-      def model
-        client.tenant.get path
-      end
-    end
-
-    subcommand "user:get", "issue a GET request as a User" do
-      parameter "PATH", "PATH to fetch from the api"
-
-      def model
-        client.user.get path
       end
     end
 
@@ -95,7 +81,7 @@ module Okapi
       parameter "PATH", "PATH of the resource collection in which the create will happen"
 
       def model
-        client.user.post path, JSON.parse($stdin.read)
+        client.post path, JSON.parse($stdin.read)
       end
     end
 
@@ -103,7 +89,7 @@ module Okapi
       parameter "PATH", "PATH of the resource to delete"
 
       def model
-        client.user.delete path
+        client.delete path
         "Successfully deleted #{path}"
       end
     end
@@ -116,7 +102,15 @@ module Okapi
 
     def client
       variables.load!
-      Okapi::Client.new(url, tenant, token)
+      anonymous = Okapi::Client.new(url, tenant, token)
+
+      if no_tenant?
+        anonymous
+      elsif no_user?
+        anonymous.tenant
+      else
+        anonymous.user
+      end
     end
 
     def execute

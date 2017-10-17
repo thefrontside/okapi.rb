@@ -15,12 +15,12 @@ RSpec.describe Okapi do
     expect(modules.first["id"]).to eq("permissions-module-4.0.4")
   end
 
-  it "blows up when trying to access an endpoint as a tenant, but no tenant id is specified" do
-    expect{ okapi "--url https://okapi.frontside.io tenant:get /authn/credentials"}.to raise_error(Okapi::ConfigurationError)
+  it "blows up when trying to access an endpoint with no user, and no tenant id is specified" do
+    expect{ okapi "--url https://okapi.frontside.io show --no-user /authn/credentials"}.to raise_error(Okapi::ConfigurationError)
   end
 
-  it "blows up when trying to access an endpoint as a user, but no auth token is specified" do
-    expect{ okapi "--url https://okapi.frontside.io --tenant fs user:get /configurations/entries"}.to raise_error(Okapi::ConfigurationError)
+  it "blows up when trying to access an endpoint that needs a user, but no auth token is specified" do
+    expect{ okapi "--url https://okapi.frontside.io --tenant fs show /configurations/entries"}.to raise_error(Okapi::ConfigurationError)
   end
 
   it "blows up if you try to specify a configuration file that doesn't exist" do
@@ -87,7 +87,7 @@ RSpec.describe Okapi do
     end
 
     it "uses the saved token to access an endpoint as a user" do
-      expect{okapi "user:get /configurations/entries"}.to_not raise_error
+      expect{okapi "show /configurations/entries"}.to_not raise_error
     end
 
     describe "creating a resource" do
@@ -105,7 +105,7 @@ RSpec.describe Okapi do
 EOJSON
           @result = JSON.parse okapi "create /configurations/entries"
         end
-        @entry =  JSON.parse okapi "user:get /configurations/entries/#{@result["id"]}"
+        @entry =  JSON.parse okapi "show /configurations/entries/#{@result["id"]}"
       end
 
       it "stores the JSON" do
@@ -118,7 +118,7 @@ EOJSON
           okapi "destroy /configurations/entries/#{@result["id"]}"
         end
         it "no longer can be found as a resource" do
-          expect{okapi "user:get /configurations/#{@result["id"]}"}.to raise_error(Okapi::RequestError, /HTTPNotFound/)
+          expect{okapi "show /configurations/#{@result["id"]}"}.to raise_error(Okapi::RequestError, /HTTPNotFound/)
         end
       end
 
