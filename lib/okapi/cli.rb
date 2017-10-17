@@ -69,7 +69,7 @@ module Okapi
       end
     end
 
-    subcommand "get", "issue a GET request to the spcified PATH" do
+    subcommand "show", "issue a GET request to the spcified PATH" do
       parameter "PATH", "PATH of the resource to get"
 
       def model
