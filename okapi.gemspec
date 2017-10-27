@@ -6,8 +6,8 @@ require "okapi/version"
 Gem::Specification.new do |spec|
   spec.name          = "okapi"
   spec.version       = Okapi::VERSION
-  spec.authors       = ["Charles Lowell"]
-  spec.email         = ["cowboyd@frontside.io"]
+  spec.authors       = ["Frontside Engineering"]
+  spec.email         = ["engineering@frontside.io"]
 
   spec.summary       = %q{Ruby utilities for interacting with an okapi cluster}
   spec.description   = %q{Interaact with an OKAPI gateway from ruby}
