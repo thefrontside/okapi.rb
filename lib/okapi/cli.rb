@@ -44,6 +44,12 @@ module Okapi
 
     subcommand "login", "authenticate to okapi and store credentials" do
       def model
+        # We know that we're going to use these values
+        # so go ahead and pull them so that if they aren't
+        # set, they will throw a configuration error
+        client.settings.url
+        client.settings.tenant
+
         username = console.ask("username: ")
         password = console.ask("password: ") { |q| q.echo = "*" }
         client.tenant.post("/authn/login", username: username, password: password) do |json, response|
