@@ -63,6 +63,18 @@ RSpec.describe Okapi do
     end
   end
 
+  describe "trying to log in without having an okapi url or a tenant id configured" do
+    def no_stdin_allowed
+      $stdin = StringIO.new
+      yield
+    ensure
+      $stdin = STDIN
+    end
+    it "fails BEFORE you have to enter in your username and password" do
+      expect { no_stdin_allowed { okapi "login" }}.to raise_error(Okapi::ConfigurationError)
+    end
+  end
+
   describe "logging in" do
     def simulate_stdin_with(*args)
       $stdout = StringIO.new
