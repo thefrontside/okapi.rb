@@ -16,19 +16,6 @@ module Okapi
       Settings.new(@url, @tenant, @token)
     end
 
-    def modules
-      endpoint = "#{settings.url}/_/proxy/modules"
-      open(endpoint) do |response|
-        JSON.parse(response.read)
-      end
-    end
-
-    def has_interface?(interface_name)
-      get("/_/proxy/tenants/#{settings.tenant}/interfaces/#{interface_name}") do |json|
-        json.length > 0
-      end
-    end
-
     def url
       settings.url
     end

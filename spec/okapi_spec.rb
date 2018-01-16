@@ -8,7 +8,7 @@ RSpec.describe Okapi do
     end
   end
 
-  let(:modules) { JSON.parse okapi "--url https://okapi-sandbox.frontside.io modules:index" }
+  let(:modules) { JSON.parse okapi "--url https://okapi-sandbox.frontside.io --tenant fs --no-user show /_/proxy/modules" }
 
   it "can get a list of modules" do
     expect(modules.length).to be(440)
@@ -33,7 +33,7 @@ RSpec.describe Okapi do
     end
 
     it "can read back the settings" do
-      expect{okapi "modules:index"}.not_to raise_error
+      expect{okapi "--no-tenant --no-user show /_/proxy/modules"}.not_to raise_error
     end
 
     describe "deleting a configuration option" do
@@ -42,7 +42,7 @@ RSpec.describe Okapi do
       end
 
       it "removes the persistent setting" do
-        expect{okapi "modules:index"}.to raise_error(Okapi::ConfigurationError)
+        expect{okapi "--no-tenant --no-user show /_/proxy/modules"}.to raise_error(Okapi::ConfigurationError)
       end
     end
   end
@@ -55,11 +55,11 @@ RSpec.describe Okapi do
     end
 
     it "can read back the settings" do
-      expect{okapi "--config #{@config_file} modules:index"}.not_to raise_error
+      expect{okapi "--config #{@config_file} --no-tenant --no-user show /_/proxy/modules"}.not_to raise_error
     end
 
     it "does not overwrite the default settings" do
-      expect{okapi "modules:index"}.to raise_error(Okapi::ConfigurationError)
+      expect{okapi "--no-tenant --no-user show /_/proxy/modules"}.to raise_error(Okapi::ConfigurationError)
     end
   end
 

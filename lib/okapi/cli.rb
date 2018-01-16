@@ -100,12 +100,6 @@ module Okapi
       end
     end
 
-    subcommand "modules:index", "show a listing of all installed modules" do
-      def model
-        client.modules
-      end
-    end
-
     def client
       variables.load!
       anonymous = Okapi::Client.new(url, tenant, token)
